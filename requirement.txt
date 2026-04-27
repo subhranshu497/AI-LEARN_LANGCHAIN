@@ -1,5 +1,7 @@
 # requirements.txt
 langchain-anthropic
+langchain-openai
 python-dotenv
 langchain-chroma
 langchain
+langchain-voyageai
