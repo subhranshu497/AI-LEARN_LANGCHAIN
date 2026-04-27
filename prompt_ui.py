@@ -34,11 +34,8 @@ template = ChatPromptTemplate.from_template(template_str)
 
 if st.button("Summarize"):
     chain = template | model
-    result = chain.invoke({
-        "paper_input": paper_input,
-        "style_input": style_input,
-        "length_input": length_input
-    })
+    prompt = f"Paper: {paper_input}\nStyle: {style_input}\nLength: {length_input}"
+    result = chain.invoke(prompt)
     st.write(result.content)
     
 
